@@ -1,0 +1,21 @@
+MDFloatLayout:
+    MDLabel:
+        id : task_label
+        halign: "center"
+        markup: False
+        text: "TODO-List App"
+        pos_hint: {"y":.45}
+    
+    ScrollView:
+        pos_hint:{'center_y':.5,'center_x':.5}
+        size_hint:(.9,.8)
+
+        MDList:
+            id: container
+
+    MDFloatingActionButton:
+        icon: 'plus-thick'
+        on_release: app.show_task_dialog() #func to add later
+        elevation_normal: 12
+        pos_hint: {'x':.8,'y':.05}
+            
